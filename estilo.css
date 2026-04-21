@@ -1,0 +1,96 @@
+/* --- REGLA MAESTRA PARA TODAS LAS CAJAS --- */
+/* Agrupamos todas tus clases para que hereden las medidas obligatorias */
+.caja, 
+.tarjeta, 
+.caja-principal, 
+.header, 
+.nav, 
+.main, 
+.bloque-article, 
+.bloque-aside, 
+.bloque-footer {
+    /* MARGIN OBLIGATORIO (Sin atajos) */
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+
+    /* PADDING OBLIGATORIO */
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+
+    /* BORDER  */
+    border-top: 2px solid red;
+    border-right: 4px dotted blue;
+    border-bottom: 6px double green;
+    border-left: 3px dashed black;
+
+    /* BORDER-RADIUs*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 40px;
+    
+    display: block; /* Para que se comporten como contenedores */
+}
+
+/* --- AJUSTES ESPECÍFICOS --- */
+
+/* Los enlaces de navegación deben ser inline-block para estar uno al lado del otro */
+nav a.caja {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #f0f0f0;
+}
+
+/* Ejercicio 1: Tarjetas */
+.tarjeta {
+    min-width: 300px;
+    min-height: 150px;
+    background-color: #e1f5fe;
+}
+.tarjeta span {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+/* Ejercicio 2: Caja Principal */
+.caja-principal {
+    min-width: 300px;
+    min-height: 150px;
+    background-color: #fff9c4;
+}
+
+/* Ejercicio 3: Estructura Web (Alineación) */
+
+/* Contenedor que envuelve article y aside */
+.contenedor-interno {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.header { background-color: #ff9800; color: white; }
+.nav { background-color: #03a9f4; color: white; }
+.main { background-color: #ffffff; }
+
+.bloque-article { 
+    background-color: #4caf50; 
+    color: white; 
+    width: 50%; 
+}
+
+.bloque-aside { 
+    background-color: #9c27b0; 
+    color: white; 
+    width: 25%; 
+    margin-top: 100px; /* Desplazamiento como pediste en la imagen */
+}
+
+.bloque-footer { 
+    background-color: #37474f; 
+    color: white; 
+}
